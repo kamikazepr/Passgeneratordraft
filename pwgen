@@ -1,0 +1,77 @@
+
+##note this is a work in progress the hackathon is expected to be completed by 2-25-22
+#currently pending is reading the variables (list) from file and picking a random value from such list.
+# from there we need to validate and test the proper import of the lists into the else statement.
+#note else statesments were testing and working among the selection of y/n
+
+import random
+
+
+#file input to variables, each file will contain several items which will be picked at random.
+#pronoun = pronoun.txt
+#noun = noun.txt
+#verb = verb.txt
+#object = object.txt
+#adjective = adjective.txt
+
+np = random.randint(0,9)
+sp = random.choice(['!','@',"#",'$','%','&','?'])
+
+
+assistance = int(input("Hello, what is my purpose today? \n" + "1. I need a password reset \n"+ "2. I need something else \n"))
+
+if assistance == 1:
+    print("ok, let me help you with that.")
+else:
+    print("I'm sorry but password reset is all my createtor taught me! Have a great day!")
+    
+symbols = input("will your password required symbols (y/n) \n")
+numbers = input("will your password required numbers (y/n) \n")
+
+
+#note prints in ifs are to test loop functions
+if symbols == 'y' and numbers == 'y':
+    #code one
+    print("You requested symbols and numbers")
+     # password output
+    #p1 = pronoun + verb + np + adjective + object +sp
+    #p2 = noun + verb + np + adjective + object + sp
+    #p3 = pronoun +sp + verb + np + adjective + object
+    #p4 = noun  + sp + verb + np +adjective + object
+    #p5 = pronoun +sp + verb + np + adjective + object + sp
+    #p6 = noun  + sp + verb + np +adjective + object + sp
+    #password = random.choice([p1,p2,p3,p4,p5,p6])
+
+    
+elif symbols == 'y' and numbers == 'n':
+    #code two
+    print("You requested symbols but no numbers")
+     # password output
+    #p1 = pronoun + verb + adjective + object +sp
+    #p2 = noun + verb + adjective + object + sp
+    #p3 = pronoun + sp + verb + adjective + object
+    #p4 = noun + sp + verb + adjective + object
+    #password = random.choice([p1,p2,p3,p4])
+    #print("Your new password is: \n")
+
+    
+elif symbols == 'n' and numbers == 'y':
+    #code three
+    print("You requested numbers but no symbols")
+     # password output
+    #p1 = pronoun + verb + adjective + object + np
+    #p2 = noun + verb + adjective + object + np
+    #p3 = pronoun + verb + np + adjective + object
+    #p4 = noun + verb + np + adjective + object
+    #password = random.choice([p1,p2,p3,p4])
+    #print("Your new password is: \n")
+
+elif symbols == 'n' and numbers == 'n':
+     #code four
+     print("You requested neither symbols or numbers")
+     # password output
+    #p1 = pronoun + verb + adjective + object
+    #p2 = noun + verb + adjective + object
+    #password = random.choice([p1,p2])
+    #print("Your new password is: \n")
+ #print("Your new password is: \n" + password)
