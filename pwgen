@@ -1,21 +1,19 @@
-
-##note this is a work in progress the hackathon is expected to be completed by 2-25-22
-#currently pending is reading the variables (list) from file and picking a random value from such list.
-# from there we need to validate and test the proper import of the lists into the else statement.
-#note else statesments were testing and working among the selection of y/n
-
 import random
 
 
-#file input to variables, each file will contain several items which will be picked at random.
-#file import format is File_object = open(r"File_Name","Access_Mode") example File_object = open(r"pronoun.txt","r") 
-## note use g.seek(0) to go to the start of the file
-#pronoun = pronoun.txt
-#noun = noun.txt
-#verb = verb.txt
-#object = object.txt
-#adjective = adjective.txt
+#need to remove \n from reading
+pn = open('pronoun.txt', 'r')
 
+pno = pn.readlines()[random.randint(0,3)]
+
+ad = open('adjective.txt', 'r')
+ado= (ad.readlines()[random.randint(0,3)])
+
+th = open('thing.txt', 'r')
+tho = (th.readlines()[random.randint(0,3)])
+
+vb = open('verb.txt', 'r')
+vbo = (vb.readlines()[random.randint(0,3)])
 
 np = random.randint(0,9)
 sp = random.choice(['!','@',"#",'$','%','&','?'])
@@ -38,6 +36,7 @@ if symbols == 'y' and numbers == 'y':
     print("You requested symbols and numbers")
      # password output
     #p1 = pronoun + verb + np + adjective + object +sp
+    print(str(pno)+str(vbo)+str(np)+str(ado)+str(tho)+str(sp))
     #p2 = noun + verb + np + adjective + object + sp
     #p3 = pronoun +sp + verb + np + adjective + object
     #p4 = noun  + sp + verb + np +adjective + object
@@ -51,6 +50,7 @@ elif symbols == 'y' and numbers == 'n':
     print("You requested symbols but no numbers")
      # password output
     #p1 = pronoun + verb + adjective + object +sp
+    print(str(pno)+str(vbo)+str(ado)+str(tho)+str(sp))
     #p2 = noun + verb + adjective + object + sp
     #p3 = pronoun + sp + verb + adjective + object
     #p4 = noun + sp + verb + adjective + object
@@ -63,6 +63,7 @@ elif symbols == 'n' and numbers == 'y':
     print("You requested numbers but no symbols")
      # password output
     #p1 = pronoun + verb + adjective + object + np
+    print(str(pno)+str(vbo)+str(ado)+str(tho)+str(np))
     #p2 = noun + verb + adjective + object + np
     #p3 = pronoun + verb + np + adjective + object
     #p4 = noun + verb + np + adjective + object
@@ -74,6 +75,7 @@ elif symbols == 'n' and numbers == 'n':
      print("You requested neither symbols or numbers")
      # password output
     #p1 = pronoun + verb + adjective + object
+     print(str(pno)+str(vbo)+str(ado)+str(tho))
     #p2 = noun + verb + adjective + object
     #password = random.choice([p1,p2])
     #print("Your new password is: \n")
