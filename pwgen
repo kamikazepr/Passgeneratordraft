@@ -8,11 +8,14 @@ import random
 
 
 #file input to variables, each file will contain several items which will be picked at random.
+#file import format is File_object = open(r"File_Name","Access_Mode") example File_object = open(r"pronoun.txt","r") 
+## note use g.seek(0) to go to the start of the file
 #pronoun = pronoun.txt
 #noun = noun.txt
 #verb = verb.txt
 #object = object.txt
 #adjective = adjective.txt
+
 
 np = random.randint(0,9)
 sp = random.choice(['!','@',"#",'$','%','&','?'])
