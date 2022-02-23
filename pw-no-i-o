@@ -1,0 +1,15 @@
+import random
+pn = open('pronoun.txt', 'r')
+
+pno = pn.readlines()[random.randint(0,3)]
+
+ad = open('adjective.txt', 'r')
+ado= (ad.readlines()[random.randint(0,3)])
+
+th = open('thing.txt', 'r')
+tho = (th.readlines()[random.randint(0,3)])
+
+vb = open('verb.txt', 'r')
+vbo = (vb.readlines()[random.randint(0,3)])
+
+print(str(pno)+str(vbo)+str(ado)+str(tho))
