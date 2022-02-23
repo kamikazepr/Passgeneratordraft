@@ -1,19 +1,23 @@
 import random
 
 
-#need to remove \n from reading
-pn = open('pronoun.txt', 'r')
-
+pn = open('pronoun.txt', 'r+')
 pno = pn.readlines()[random.randint(0,3)]
+pno = pno.replace('\n','')
+
+#note: x = x.replace('\n','') removes \n from reading the line
 
 ad = open('adjective.txt', 'r')
 ado= (ad.readlines()[random.randint(0,3)])
+ado = ado.replace('\n','')
 
 th = open('thing.txt', 'r')
 tho = (th.readlines()[random.randint(0,3)])
+tho = tho.replace('\n','')
 
 vb = open('verb.txt', 'r')
 vbo = (vb.readlines()[random.randint(0,3)])
+vbo = vbo.replace('\n','')
 
 np = random.randint(0,9)
 sp = random.choice(['!','@',"#",'$','%','&','?'])
