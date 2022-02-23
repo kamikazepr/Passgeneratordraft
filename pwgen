@@ -19,12 +19,12 @@ np = random.randint(0,9)
 sp = random.choice(['!','@',"#",'$','%','&','?'])
 
 
-assistance = int(input("Hello, what is my purpose today? \n" + "1. I need a password reset \n"+ "2. I need something else \n"))
+assistance = int(input("Hello, what is my purpose\n" + "1. Generate new password \n"+ "2. Pass the butter \n"))
 
 if assistance == 1:
     print("ok, let me help you with that.")
 else:
-    print("I'm sorry but password reset is all my createtor taught me! Have a great day!")
+    print("I'm sorry, but only my borther was design to pass the butter")
     
 symbols = input("will your password required symbols (y/n) \n")
 numbers = input("will your password required numbers (y/n) \n")
